@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\add_user.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\apply.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\bg_blue.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\bg_gray.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\bg_green.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\cancel.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\disabled_user.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\disabled_user.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\edit_user.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\enabled_user.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\enabled_user.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\exit.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\find.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ftpadmingui.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\green.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\green2.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\green3.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\green4.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\green5.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\green6.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\green7.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\help.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\IP.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ip_add.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ip_remove.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ok.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\policy.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\red.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\remove_user.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\setting.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Toolbar.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\User.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\yellow.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="lang0x0804.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="lang0x0804.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

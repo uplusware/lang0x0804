@@ -1,0 +1,518 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "atlres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (Simplified, PRC) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BG_BLUE             BITMAP                  "res\\bg_blue.bmp"
+
+IDB_BG_GRAY             BITMAP                  "res\\bg_gray.bmp"
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+
+IDB_BG_GREEN            BITMAP                  "res\\bg_green.bmp"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR 32, 32
+BEGIN
+    BUTTON      ID_SERVICE_START
+    BUTTON      ID_SERVICE_STOP
+    SEPARATOR
+    BUTTON      ID_NT_SERVICE_MODE
+    SEPARATOR
+    BUTTON      ID_BASIC_SETTING
+    SEPARATOR
+    BUTTON      ID_ADMIN_ACCOUNTID
+    BUTTON      ID_ADMIN_POLICY
+    SEPARATOR
+    BUTTON      ID_APP_ABOUT
+    SEPARATOR
+    BUTTON      ID_APP_EXIT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU
+BEGIN
+    POPUP "服务(&S)"
+    BEGIN
+        MENUITEM "启动(&S)",                      ID_SERVICE_START
+        MENUITEM "停止(&T)",                      ID_SERVICE_STOP
+        MENUITEM SEPARATOR
+        MENUITEM "系统服务模式(&N)",                  ID_NT_SERVICE_MODE
+        MENUITEM SEPARATOR
+        MENUITEM "退出(&X)",                      ID_APP_EXIT
+    END
+    POPUP "查看(&V)"
+    BEGIN
+        MENUITEM "工具栏(&T)",                     ID_VIEW_TOOLBAR
+        MENUITEM "状态栏(&S)",                     ID_VIEW_STATUS_BAR
+    END
+    POPUP "设置(&T)"
+    BEGIN
+        MENUITEM "基本设置(&B)",                    ID_BASIC_SETTING
+        MENUITEM SEPARATOR
+        MENUITEM "用户管理(&I)",                    ID_ADMIN_ACCOUNTID
+        MENUITEM "策略管理(&P)",                    ID_ADMIN_POLICY
+    END
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "关于(&A)",                      ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\ftpadmingui.ico"
+
+IDI_USER                ICON                    "res\\User.ico"
+
+IDI_DISABLED_USER       ICON                    "res\\disabled_user.ico"
+
+IDI_ENABLED_USER        ICON                    "res\\enabled_user.ico"
+
+IDI_APPLY               ICON                    "res\\apply.ico"
+
+IDI_SETTING             ICON                    "res\\setting.ico"
+
+IDI_POLICY              ICON                    "res\\policy.ico"
+
+IDI_STARTFLAG0          ICON                    "res\\green.ico"
+
+IDI_STOPFLAG            ICON                    "res\\red.ico"
+
+IDI_IDLEFLAG            ICON                    "res\\yellow.ico"
+
+IDI_CREATE_USER         ICON                    "res\\add_user.ico"
+
+IDI_REMOVE_USER         ICON                    "res\\remove_user.ico"
+
+IDI_MODIFY_USER         ICON                    "res\\edit_user.ico"
+
+IDI_FIND                ICON                    "res\\find.ico"
+
+IDI_IP_REMOVE           ICON                    "res\\ip_remove.ico"
+
+IDI_IP_APPEND           ICON                    "res\\ip_add.ico"
+
+IDI_CANCEL              ICON                    "res\\cancel.ico"
+
+IDI_OK                  ICON                    "res\\ok.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 295, 79
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于"
+FONT 9, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,122,58,50,14
+    LTEXT           "UplusFtp Server v2.0",IDC_STATIC,38,7,97,8
+    ICON            IDR_MAINFRAME,IDC_STATIC,7,7,20,20
+    LTEXT           "版权所有(C) uplusware 2022",IDC_STATIC,38,18,94,8
+    LTEXT           "软件支持: uplusware@gmail.com",IDC_STATIC,38,29,129,8
+    PUSHBUTTON      "http://uplusftp.com",IDC_HOMEPAGE2,157,39,68,14
+    PUSHBUTTON      "http://uplusware.net",IDC_HOMEPAGE1,85,39,69,14
+    LTEXT           "更多请访问:",IDC_STATIC,38,40,43,8
+END
+
+IDD_BASIC_SETTING_DIALOG DIALOGEX 0, 0, 214, 237
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "基本设置"
+FONT 9, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,14,216,50,14
+    PUSHBUTTON      "取消",IDCANCEL,148,216,50,14
+    COMBOBOX        IDC_SERVICE_IP,13,19,148,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "绑定",IDC_BIND_IP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,169,21,32,10
+    LTEXT           "FTP服务:",IDC_STATIC,12,58,32,8
+    LTEXT           "Web服务:",IDC_STATIC,91,58,34,8
+    EDITTEXT        IDC_FTP_PORT,48,55,32,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_WEB_PORT,129,55,32,14,ES_AUTOHSCROLL
+    LTEXT           "最大同时连接数:",IDC_STATIC,13,85,59,8
+    EDITTEXT        IDC_MAX_NUM_SIM_CONN,76,83,25,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_MAX_NUM_SIM_CONN_CTRL,"msctls_updown32",UDS_WRAP | UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS,102,83,13,14
+    GROUPBOX        "站点欢迎信息",IDC_STATIC,7,104,200,109
+    EDITTEXT        IDC_WEL_MSG,12,116,190,92,ES_MULTILINE | ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "应用",ID_APPLY,81,216,50,14
+    GROUPBOX        "端口",IDC_STATIC,7,43,200,32
+    GROUPBOX        "绑定IP",IDC_STATIC,7,7,200,32
+    CONTROL         "PASV模式",IDC_PASV_MODE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,126,86,51,10
+END
+
+IDD_USER_ADMIN_DLG DIALOGEX 0, 0, 418, 327
+STYLE DS_SETFONT | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "用户管理"
+FONT 9, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    CONTROL         "List1",IDC_USER_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,0,27,418,300
+    PUSHBUTTON      "创建",IDC_CREATE_USER,2,2,45,22
+    PUSHBUTTON      "修改",IDC_MODIFY_USER,49,2,45,22
+    PUSHBUTTON      "删除",IDC_REMOVE_USER,96,2,45,22
+END
+
+IDD_POLICY_ADMIN_DLG DIALOG 0, 0, 196, 210
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "访问策略"
+FONT 9, "MS Sans Serif"
+BEGIN
+    CONTROL         "拒绝",IDC_POLICY_REJECT,"Button",BS_AUTORADIOBUTTON | WS_GROUP,7,7,32,10
+    CONTROL         "允许",IDC_POLICY_PERMIT,"Button",BS_AUTORADIOBUTTON,49,7,32,10
+    LISTBOX         IDC_IP_LIST,7,37,128,149,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "删除",IDC_REMOVE_IP,139,37,50,14
+    EDITTEXT        IDC_NEW_IP,7,20,128,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "增加",IDC_APPEND_IP,139,20,50,14
+    PUSHBUTTON      "应用",ID_APPLY,73,189,50,14
+    PUSHBUTTON      "确定",IDOK,14,189,50,14
+    PUSHBUTTON      "取消",IDCANCEL,132,189,50,14
+END
+
+IDD_USER_INFORMATION DIALOG 0, 0, 298, 251
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "用户信息"
+FONT 9, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,91,230,50,14
+    PUSHBUTTON      "取消",IDCANCEL,172,230,50,14
+    LTEXT           "用户名:",IDC_STATIC,14,10,27,8
+    EDITTEXT        IDC_USERNAME,45,7,56,14,ES_AUTOHSCROLL
+    LTEXT           "密码:",IDC_STATIC,22,26,19,8
+    EDITTEXT        IDC_USERPWD,45,24,56,14,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "密码确认:",IDC_STATIC,105,26,35,8
+    EDITTEXT        IDC_USERPWD_VF,141,24,56,14,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "描述:",IDC_STATIC,22,44,19,8
+    EDITTEXT        IDC_USER_ALIAS,45,41,152,14,ES_AUTOHSCROLL
+    LTEXT           "主目录:",IDC_STATIC,14,60,27,8
+    EDITTEXT        IDC_USER_HOME,45,58,152,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "浏览...",IDC_BROWSE_HOME,200,58,46,14
+    GROUPBOX        "欢迎信息",IDC_STATIC,7,80,196,146
+    GROUPBOX        "权限",IDC_STATIC,208,80,83,146
+    CONTROL         "查看文件列表",IDC_LIST_DIR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,216,93,64,10
+    CONTROL         "创建文件夹",IDC_CREATE_DIR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,216,108,56,10
+    CONTROL         "删除文件夹",IDC_REMOVE_DIR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,216,123,56,10
+    CONTROL         "创建文件",IDC_CREATE_FILE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,216,138,48,10
+    CONTROL         "读文件",IDC_READ_FILE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,216,153,40,10
+    CONTROL         "写文件",IDC_WRITE_FILE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,216,168,40,10
+    CONTROL         "删除文件",IDC_DELETE_FILE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,216,183,48,10
+    CONTROL         "执行",IDC_EXECUTE_FILE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,216,198,32,10
+    CONTROL         "禁用账号",IDC_DISABLED_USER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,216,213,48,10
+    EDITTEXT        IDC_USER_WEL_MSG,12,90,185,131,ES_MULTILINE | ES_AUTOHSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 288
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 72
+    END
+
+    IDD_BASIC_SETTING_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 207
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 230
+    END
+
+    IDD_USER_ADMIN_DLG, DIALOG
+    BEGIN
+    END
+
+    IDD_POLICY_ADMIN_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 189
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 203
+    END
+
+    IDD_USER_INFORMATION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 291
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 244
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,0,0,0
+ PRODUCTVERSION 2,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080004b0"
+        BEGIN
+            VALUE "CompanyName", "Uplusware"
+            VALUE "FileDescription", "UplusFtp Server"
+            VALUE "FileVersion", "2.0.0.0"
+            VALUE "InternalName", "FtpAdminGUI"
+            VALUE "LegalCopyright", "Copyright 2022"
+            VALUE "OriginalFilename", "FtpAdminGUI"
+            VALUE "ProductName", "UplusFtp Server"
+            VALUE "ProductVersion", "2.0.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x800, 1200
+    END
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""atlres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST ""res\\\\ftpadmingui.exe.manifest""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDR_MAINFRAME           "ftpadmingui"
+END
+
+STRINGTABLE
+BEGIN
+    ID_APP_ABOUT            "帮助和版权信息\n帮助"
+    ID_APP_EXIT             "退出程序\n退出"
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_TOOLBAR         "显示/隐藏工具栏\n工具栏"
+    ID_VIEW_STATUS_BAR      "显示隐藏状态栏\n状态栏"
+END
+
+STRINGTABLE
+BEGIN
+    ATL_IDS_SCSIZE          "改变窗口大小"
+    ATL_IDS_SCMOVE          "改变窗口位置"
+    ATL_IDS_SCMINIMIZE      "最小化到任务栏"
+    ATL_IDS_SCMAXIMIZE      "最大化窗口"
+END
+
+STRINGTABLE
+BEGIN
+    ATL_IDS_SCRESTORE       "恢复窗口"
+END
+
+STRINGTABLE
+BEGIN
+    ATL_IDS_IDLEMESSAGE     "欢迎使用 UplusFtp Server, 任何问题请发信到 uplusware@gmail.com"
+END
+
+STRINGTABLE
+BEGIN
+    ID_SERVICE_START        "启动服务\n启动"
+    ID_BASIC_SETTING        "设置基本设置\n基本设置"
+    ID_SERVICE_STOP         "停止服务\n停止"
+    ID_NT_SERVICE_MODE      "设置/取消系统服务模式\n系统服务模式"
+    ID_ADMIN_ACCOUNTID      "管理用户\n用户"
+    ID_ADMIN_POLICY         "策略管理\n策略"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_VIEW_FONT_STYLE     "宋体·"
+    IDS_HOST_NAME_TITLE     "        主机名:"
+    IDS_HOST_IP_TITLE       "        主机IP:"
+    IDS_FTP_PORT_TITLE      "       FTP端口:"
+    IDS_WEB_PORT_TITLE      "       Web端口:"
+    IDS_MAX_CONN_TITLE      "最大同时连接数:"
+    IDS_CURR_CONN_TITLE     "    当前连接数:"
+    IDS_RUN_FOR_TITLE       "  服务运行时间:"
+    IDS_SERVICE_STOP_TITLE  "UplusFtp 服务已经停止"
+    IDS_MSGBOX_SAVE_SETTINGS "保存设置"
+    IDS_MSGBOX_FTP_PORT_EMPTY "FTP端口不能为空"
+    IDS_MSGBOX_WEB_PORT_EMPTY "WEB端口不能为空"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_MSGBOX_MAX_CONN_EMPTY "最大连接数不能为空"
+    IDS_MSGBOX_SAVE_USER    "用户信息"
+    IDS_MSGBOX_USERNAME_EMPTY "用户名不能为空"
+    IDS_MSGBOX_HOME_DIR_EMPT "主目录不能为空"
+    IDS_MSGBOX_PASSWORD_VERIFY_FAILED "密码和确认密码不一致"
+    IDS_MSGBOX_PASSWORD_EMPTY "密码不能为空"
+    IDS_LABEL_USER_LIST_COLUMN_ID "用户名"
+    IDS_LABEL_USER_LIST_COLUMN_DESC "描述"
+    IDS_LABEL_USER_LIST_COLUMN_HOME_FOLDER "主目录"
+    IDS_MSGBOX_TITLE_ERROR  "错误 - UplusFtp Server"
+    IDS_MSGBOX_ENABLE_NT_SERVICE_TITLE "注册系统服务"
+    IDS_MSGBOX_ENABLE_NT_SERVICE "确定要注册为系统服务吗?"
+    IDS_MSGBOX_DISABLE_NT_SERVICE_TITLE "卸载系统服务"
+    IDS_MSGBOX_DISABLE_NT_SERVICE "确定要卸载系统服务吗?"
+    IDS_MSGBOX_SAVE_BASIC_SETTING_TITLE "基本设置"
+    IDS_MSGBOX_SAVE_BASIC_SETTING "基本设置已经改变，需要保存并重启服务吗?"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_MSGBOX_SAVE_POLICY_TITLE "访问策略"
+    IDS_MSGBOX_SAVE_POLICY  "访问策略已经改变，需要保存吗?"
+    IDS_MSGBOX_RESTART_SERVICE_TITLE "重启服务"
+    IDS_MSGBOX_LOAD_CONFIG_CONFIRM "确定要重启服务以应用新的设置吗?"
+    IDS_MSGBOX_START_SERVICE_TITLE "启动服务"
+    IDS_MSGBOX_START_SERVICE_FAILED "启动服务失败"
+    IDS_MSGBOX_STOP_SERVICE_TITLE "停止服务"
+    IDS_MSGBOX_STOP_SERVICE_FAILED "停止服务失败"
+    IDS_MSGBOX_INATLL_SERVICE_TITLE "安装服务"
+    IDS_MSGBOX_INATLL_SERVICE_FAILED "安装服务失败"
+    IDS_MSGBOX_REGISTE_SERVICE_FAILED "注册服务到Windows系统失败"
+    IDS_MSGBOX_REGISTE_SERVICE_OK "注册服务到Windows系统成功"
+    IDS_MSGBOX_REGISTE_SERVICE_TITLE "注册服务"
+    IDS_MSGBOX_UNREGISTER_SERVICE_TITLE "卸载服务"
+    IDS_MSGBOX_UNREGISTER_SERVICE_FAILED "卸载服务失败"
+    IDS_MSGBOX_UNREGISTER_SERVICE_OK "卸载服务成功"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_MSGBOX_IP_EXIST     "此IP已经存在"
+    IDS_MSGBOX_SEL_RECORD_ALERT "请选择一条记录"
+    IDS_MSGBOX_USER_EXIST   "用户已经存在"
+    IDS_MSGBOX_SEL_USER_MODIFY "请选择要编辑的用户"
+    IDS_MSGBOX_SEL_USER_REMOVE "请选择要删除的用户"
+    IDS_MSGBOX_REMOVE_USER_CONFIRM "确定要删除此用户吗?"
+    IDS_MSGBOX_REMOVE_USER_TITLE "删除用户"
+    IDS_MSGBOX_GET_FOLDER_FAILED "获取文件夹失败"
+    IDS_WEB_CHANGE_PWD      "密码"
+    IDS_WEB_NEW_PWD         "新密码"
+    IDS_WEB_VERIFY_PWD      "确认密码"
+    IDS_WEB_BTN_VALUE_UPDATE "更新"
+    IDS_WEB_PASSWORD_ALERT_EMPTY "密码不能为空"
+    IDS_WEB_PASSWORD_ALERT_VERIFY "密码和确认密码不一致"
+    IDS_WEB_LIST_FILES      "目录和文件"
+    IDS_WEB_PASSWORD_UPDATE_SUCCESFULLY "更新成功"
+END
+
+#endif    // Chinese (Simplified, PRC) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST "res\\ftpadmingui.exe.manifest"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
