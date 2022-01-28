@@ -42,7 +42,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\wtl\include;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(VC_IncludePath);$(WindowsSDK_IncludePath);$(WindowsSdkDir)include;$(FrameworkSDKDir)\include;</IncludePath>
+    <IncludePath>$(VC_SourcePath)\wtl\include;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(VC_IncludePath);$(WindowsSDK_IncludePath);$(WindowsSdkDir)include;$(FrameworkSDKDir)\include;</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
