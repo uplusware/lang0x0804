@@ -1,4 +1,4 @@
-# UplusFtp UI/Web language pack
+# UplusFtp UI/Web 语言包
 
  1) 使用 [Visual Studio](https://visualstudio.microsoft.com/) 打开工程，重命名为 lang[__十六进制语言ID__] 格式，例如 lang0x0804. *相关语言ID，请参考 [这里](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/available-language-packs-for-windows)*
  2) 翻译资源到目的语言
